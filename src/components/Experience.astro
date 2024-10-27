@@ -1,0 +1,38 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const experience = [
+  {
+    date: "Actualmente...",
+    title:
+      "Analista de Sistemas y Métodos Informáticos - Procuraduría General de la Nación",
+    description:
+      "Diseño soluciones y desarrollo aplicaciones web utilizando frameworks como Vue.js, Vuetify y Laravel. Realizo todo el proceso, desde la construcción del diagrama EERD y el diseño de prototipos UI, hasta el desarrollo completo de la aplicación.",
+    //link: "#",
+  },
+  {
+    date: "2021 -2023",
+    title: "Operador de Computadoras - Procuraduría General de la Nación",
+    description:
+      "Actualización y desarrollo de componentes para aplicaciones web front-end utilizando los frameworks Vue.js y Vuetify.",
+    //link: "#",
+  },
+  {
+    date: "2019 -2020",
+    title: "Asistente Tester - Smartmatic",
+    description:
+      "Realización de pruebas manuales y algunas automatizadas para sistemas diseñados para el registro y conteo de votaciones a nivel nacional. He participado en proyectos de países como Reino Unido, Dinamarca y Albania.",
+    //link: "#",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    experience.map((element) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...element} />
+      </li>
+    ))
+  }
+</ol>
